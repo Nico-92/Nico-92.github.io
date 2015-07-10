@@ -1,0 +1,16 @@
+.left-navbar{
+	background-color: #2196f3;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	position: absolute;
+}
+.img-me{
+	height: 150px;
+	width: 150px;
+	margin-top: 5%;
+}
+.contact{
+	color: #fff !important;
+	vertical-align: middle;
+}
