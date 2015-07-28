@@ -1,4 +1,4 @@
-$('#email').click(function(){
+$('#email').click(function() {
 	alert();
 });
 
@@ -27,3 +27,6 @@ $("#unipdProjectsButton").click(function() {
 	$("#unipdProjects").toggle('fold', 1000);
 });
 
+$(function() {
+	$('i').tooltip();
+});
