@@ -74,3 +74,21 @@
 #subtitle{
 	color: #fff !important;
 }
+.image-wrapper { 
+    position: relative;
+}
+.image-wrapper h1 { 
+    background: #fff;
+    color: #000;
+    font-family: $font-family-serif;
+    font-size:3vw;
+    line-height: 1.6em;
+    margin: 0px;
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.image-wrapper img{
+	height: 400px;
+	width: 100%;
+}

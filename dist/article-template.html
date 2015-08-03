@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
+		<link href="css/roboto.min.css" rel="stylesheet">
+		<link href="css/material.min.css" rel="stylesheet">
+		<link href="css/ripples.min.css" rel="stylesheet">
+		<link href="css/personal.css" rel="stylesheet">
+	</head>
+<body>
+<div class="row">
+	<div class="hidden-lg hidden-md hidden-sm col-xs-12 left-navbar left-navbar-mobile text-center">
+		sidebar mobile
+	</div>
+	<div class="col-md-3 col-sm-4 hidden-xs left-navbar left-navbar-desktop text-center" >
+		sidebar desktop
+	</div>
+	<div class="image-wrapper row">
+		<img src="images/test.jpg">
+		<h1>TITOLO</h1>
+	</div>
+	<div class="col-md-9 col-sm-8 col-xs-12 content col-md-offset-3 col-sm-offset-4">
+		<h2>Is JDK already intalled?</h2>
+		Open terminal and digit:
+		<div class="code">
+			java -version
+		</div>
+		If the result is something like this
+		<div class="code" >
+			java version “1.7.0_25″
+			Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+			Java HotSpot(TM) Server VM (build 23.3-b01, mixed mode)
+		</div>
+		everything is ok, otherwise type:
+		<div class="code" >
+			sudo add-apt-repository ppa:webupd8team/java
+			sudo apt-get update && sudo apt-get install oracle-jdk7-installer
+		</div>
+		and then after the installation
+		<div class="code">
+		update-alternatives --display java</div>
+		Long story short
+		Verbose
+		<small>What is JDK</small>
+		(vedi codemirror per il codice)
+	</div>
+</div>
+</body>
+</html>
