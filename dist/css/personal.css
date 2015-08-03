@@ -1,40 +1,49 @@
-.left-navbar{
-	background-color: #2196f3;
-	color: #fff;
-	text-decoration: none;
-	position: fixed;
-	height: 100%;
+.card .card-body{
+	height: auto !important;
 }
-.link{
-	margin-left: 5px;
-	margin-right: 5px;
+.contact{
+	color: #fff !important;
+	vertical-align: middle;
+}
+.content{
+	padding: 5%;
+	color: #000;
+}
+.extend{
+  height: auto !important;
+  display: none;
+  color: #000 !important;
 }
 .img-me{
 	height: 150px;
 	width: 150px;
 	margin-top: 5%;
 }
-.contact{
-	color: #fff !important;
-	vertical-align: middle;
+.interest i{
+	display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    background: #D5D5D5;
+    border-radius: 3px;
+    cursor: pointer;
 }
-.progress {
-	background: #1B75BD;
-	border-radius: 7px; 
-	height: 10px;
-	width: 70%;
-	margin-left: 15%;
+.left-navbar{
+	background-color: #2196f3;
+	color: #fff;
+	text-decoration: none;
 }
-.progress-bar {
-	background-color: #fff !important;
+.left-navbar-desktop{
+	position: fixed;
+	height: 100%;
 }
-.content{
-	padding: 5%;
-	color: #000;
+.left-navbar-mobile{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
-.panel-body .title{
-  color: #2196f3;
-  font-size:18px;
+.link{
+	margin-left: 5px;
+	margin-right: 5px;
 }
 .panel-body .description{
   margin-right: 1vw;
@@ -46,20 +55,22 @@
 .panel-body .grade span{
   color: #2196f3;
 }
+.panel-body .title{
+  color: #2196f3;
+  font-size:18px;
+}
+.progress {
+	background: #1B75BD;
+	border-radius: 7px; 
+	height: 10px;
+	width: 70%;
+	margin-left: 15%;
+}
+.progress-bar {
+	background-color: #fff !important;
+}
+
 
 #subtitle{
 	color: #fff !important;
-}
-.extend{
-  height: auto !important;
-  display: none;
-  color: #000 !important;
-}
-.interest i{
-	display: inline-block;
-    padding: 10px;
-    margin: 10px;
-    background: #D5D5D5;
-    border-radius: 3px;
-    cursor: pointer;
 }
