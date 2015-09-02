@@ -10,43 +10,58 @@
 		<link href="css/ripples.min.css" rel="stylesheet">
 		<link href="css/personal.css" rel="stylesheet">
 	</head>
-<body>
-<div class="row">
+<body ng-app="article">
+<div class="row" ng-controller="myArticle">
 	<div class="hidden-lg hidden-md hidden-sm col-xs-12 left-navbar left-navbar-mobile text-center">
 		sidebar mobile
 	</div>
 	<div class="col-md-3 col-sm-4 hidden-xs left-navbar left-navbar-desktop text-center" >
 		sidebar desktop
 	</div>
-	<div class="image-wrapper row">
-		<img src="images/test.jpg">
-		<h1>TITOLO</h1>
-	</div>
 	<div class="col-md-9 col-sm-8 col-xs-12 content col-md-offset-3 col-sm-offset-4">
-		<h2>Is JDK already intalled?</h2>
-		Open terminal and digit:
-		<div class="code">
-			java -version
+		<input type="text" ng-model="selected" typeahead="tag for tag in tags | filter:$viewValue | limitTo:5" typeahead-on-select="onSelect($item, $model, $label)" class="input-query" placeholder="Keyword" />
+		<p>
+			<span ng-repeat="tag in selectedTags">
+				<button class="btn btn-default btn-raised" ng-click="removeTag($index)">{{tag}}</button>	
+			</span>
+		</p>
+		<p ng-repeat="article in articles" ng-click="openArticle($index)" class="article-list clickable">
+			<strong>{{article.title}}</strong>
+			{{article.description}}
+		</p>
+		<div class="card" ng-show="showArticleBody">
+			<div class="card-content" style="position:inherit !important;">
+				<div class="card-body">
+					<span class="glyphicon glyphicon-remove clickable close-article" ng-click="closeArticle();"></span>
+					<p class="title">{{title}}</p>
+					<p class="description">
+						<h2>Installazione</h2>
+							<div ng-repeat="element in installation">
+								{{element.commandTextIt}}
+								<pre onClick="selectCode(this);"><code>{{element.command}}</pre></code>
+							</div>
+						<h2>Configurazione</h2>
+						<div ng-repeat="element in configuration">
+							{{element.commandTextIt}}
+							<pre onClick="selectCode(this);"><code>{{element.command}}</pre></code>
+						</div>
+						<h2>Utilizzo</h2>
+						<div ng-repeat="element in use">
+							{{element.commandTextIt}}
+							<pre onClick="selectCode(this);"><code>{{element.command}}</pre></code>
+						</div>
+					</p>
+				</div>
+			</div>
 		</div>
-		If the result is something like this
-		<div class="code" >
-			java version “1.7.0_25″
-			Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
-			Java HotSpot(TM) Server VM (build 23.3-b01, mixed mode)
-		</div>
-		everything is ok, otherwise type:
-		<div class="code" >
-			sudo add-apt-repository ppa:webupd8team/java
-			sudo apt-get update && sudo apt-get install oracle-jdk7-installer
-		</div>
-		and then after the installation
-		<div class="code">
-		update-alternatives --display java</div>
-		Long story short
-		Verbose
-		<small>What is JDK</small>
-		(vedi codemirror per il codice)
 	</div>
 </div>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="bower_components/lodash/lodash.min.js"></script>
+<script type="text/javascript" src="js/article.js"></script>
+<script type="text/javascript" src="js/personal.js"></script>
 </body>
 </html>

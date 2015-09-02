@@ -1,0 +1,96 @@
+[{
+	"id": "1",
+	"title": "Installare server ftp su server Ubuntu",
+	"description": "le cose blabla bla",
+	"installation": [{
+		"command": "sudo vsftpd -v",
+		"commandTextIt": "Verificare se vsftpd è già installato",
+		"commandTextEn": "Verify if vsftpd is already installed"
+	}, {
+		"command": "sudo apt-get install vsftpd",
+		"commandTextIt": "Se non lo è installarlo con:",
+		"commandTextEn": "If not install it with:"
+	}],
+	"configuration": [{
+		"command": "sudo nano /etc/vsftpd.conf",
+		"commandTextIt": "Apri il file di configurazione",
+		"commandTextEn": "Open the config file"
+	}, {
+		"command": "local_enable=YES",
+		"commandTextIt": "Togliere il # per abilitare gli utenti di sistema alla connessione via ftp",
+		"commandTextEn": "Remove the # to allow the system user to connect via ftp"
+	}, {
+		"command": "chroot_local_user=YES",
+		"commandTextIt": "Togliere il # per limitare l'accesso alla directory home e relative subdirectories",
+		"commandTextEn": "Remove the # to limit the access to the home directory and the relative subdirectories"
+	}, {
+		"command": "sudo nano  /etc/ftpusers",
+		"commandTextIt": "Qui un elenco degli utente che vengono bloccati, si consiglia di non rimuovere quelli già presenti",
+		"commandTextEn": "Here a list of blocked users. Is best practice to not remove the users already in the list"
+	}],
+	"use": [{
+		"command": "sudo /etc/init.d/vsftpd stop",
+		"commandTextIt": "Per fermare il servizio:",
+		"commandTextEn": "To stop the service:"
+	}, {
+		"command": "sudo /etc/init.d/vsftpd start",
+		"commandTextIt": "Per avviare il servizio:",
+		"commandTextEn": "To start the service:"
+	}, {
+		"command": "sudo /etc/init.d/vsftpd restart",
+		"commandTextIt": "Per riavviare il servizio:",
+		"commandTextEn": "To restart the service:"
+	}, {
+		"command": "ftp 192.168.0.1",
+		"commandTextIt": "Per connetersi:",
+		"commandTextEn": "To connect"
+	}]
+},
+{
+	"id": "2",
+	"title": "Creare un nuovo utente Ubuntu",
+	"description": "le cose blabla bla",
+	"installation": [{
+		"command": "sudo vsftpd -v",
+		"commandTextIt": "Verificare se vsftpd è già installato",
+		"commandTextEn": "Verify if vsftpd is already installed"
+	}, {
+		"command": "sudo apt-get install vsftpd",
+		"commandTextIt": "Se non lo è installarlo con:",
+		"commandTextEn": "If not install it with:"
+	}],
+	"configuration": [{
+		"command": "sudo nano /etc/vsftpd.conf",
+		"commandTextIt": "Apri il file di configurazione",
+		"commandTextEn": "Open the config file"
+	}, {
+		"command": "local_enable=YES",
+		"commandTextIt": "Togliere il # per abilitare gli utenti di sistema alla connessione via ftp",
+		"commandTextEn": "Remove the # to allow the system user to connect via ftp"
+	}, {
+		"command": "chroot_local_user=YES",
+		"commandTextIt": "Togliere il # per limitare l'accesso alla directory home e relative subdirectories",
+		"commandTextEn": "Remove the # to limit the access to the home directory and the relative subdirectories"
+	}, {
+		"command": "sudo nano  /etc/ftpusers",
+		"commandTextIt": "Qui un elenco degli utente che vengono bloccati, si consiglia di non rimuovere quelli già presenti",
+		"commandTextEn": "Here a list of blocked users. Is best practice to not remove the users already in the list"
+	}],
+	"use": [{
+		"command": "sudo /etc/init.d/vsftpd stop",
+		"commandTextIt": "Per fermare il servizio:",
+		"commandTextEn": "To stop the service:"
+	}, {
+		"command": "sudo /etc/init.d/vsftpd start",
+		"commandTextIt": "Per avviare il servizio:",
+		"commandTextEn": "To start the service:"
+	}, {
+		"command": "sudo /etc/init.d/vsftpd restart",
+		"commandTextIt": "Per riavviare il servizio:",
+		"commandTextEn": "To restart the service:"
+	}, {
+		"command": "ftp 192.168.0.1",
+		"commandTextIt": "Per connetersi:",
+		"commandTextEn": "To connect"
+	}]
+}]

@@ -27,6 +27,21 @@ $("#unipdProjectsButton").click(function() {
 	$("#unipdProjects").toggle('fold', 1000);
 });
 
-$(function() {
+/*$(function() {
 	$('i').tooltip();
-});
+});*/
+
+function selectCode(node) {
+	var range, selection;
+	if (window.getSelection && document.createRange) {
+		selection = window.getSelection();
+		range = document.createRange();
+		range.selectNodeContents($(node)[0]);
+		selection.removeAllRanges();
+		selection.addRange(range);
+	} else if (document.selection && document.body.createTextRange) {
+		range = document.body.createTextRange();
+		range.moveToElementText($(node)[0]);
+		range.select();
+	}
+};
