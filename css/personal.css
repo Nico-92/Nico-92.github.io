@@ -109,3 +109,20 @@
 	height: 400px;
 	width: 100%;
 }
+.section-title{
+	margin-left: 20px;
+	font-weight: bold;
+}
+.about-me{
+	text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.upwork-ico{
+	border-radius: 50%;
+    width: 56px;
+    height: 56px;
+}
+.contact-icon{
+	background-color: #5bbc2e !important;
+}

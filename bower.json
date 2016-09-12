@@ -6,16 +6,6 @@
     "Federico Zivolo <info@mywebexpression.com>"
   ],
   "description": "Material Design theme for Bootstrap 3",
-  "main": [
-    "dist/css/material.css",
-    "dist/js/material.js",
-    "dist/css/ripples.css",
-    "dist/js/ripples.js",
-    "dist/fonts/Material-Design-Icons.eot",
-    "dist/fonts/Material-Design-Icons.svg",
-    "dist/fonts/Material-Design-Icons.ttf",
-    "dist/fonts/Material-Design-Icons.woff"
-  ],
   "ignore": [
     "test",
     "screenshots",
